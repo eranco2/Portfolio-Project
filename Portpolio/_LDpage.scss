@@ -1,0 +1,120 @@
+.twoBtnOnTop {
+    a {
+        margin: 8px 15px 18px 0;
+        width: 8vw;
+        background-color: rgb(33, 36, 41, 0.1);
+        color: rgb(33, 36, 41);
+
+        &:hover {
+            background-color: $backColor;
+            outline: 2px solid rgb(33, 36, 41);
+            color: whitesmoke;
+        }
+    }
+}
+
+.containerLDicon {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
+
+.LDicon {
+    width: 22vw;
+}
+
+.containerImg {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    img {
+        margin-bottom: 25px;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .twoBtnOnTop {
+        a {
+            width: 50%;
+            /* Adjust button width for tablets */
+        }
+    }
+
+    .containerLDicon {
+        margin-bottom: 20px;
+        /* Adjust margin for tablets */
+    }
+
+    .LDicon {
+        width: 18vw;
+        /* Adjust icon size for tablets */
+    }
+
+    .containerImg {
+        flex-direction: row;
+        /* Keep images in row for tablets */
+    }
+
+    .containerImg {
+        align-items: center;
+
+        div {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .containerImg img {
+        width: 95%;
+        /* Adjust image size for tablets */
+    }
+}
+
+/* Mobile (up to 767px) */
+@media (max-width: 767px) {
+
+    #projectPage {
+        display: flex;
+        flex-direction: column;
+
+        .container_header {
+            height: 45vh;
+
+            h1 {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+
+    .twoBtnOnTop {
+        a {
+            width: 100%;
+        }
+    }
+
+    .containerLDicon {
+        margin-bottom: 15px;
+    }
+
+    .LDicon {
+        width: 40vw;
+        display: block;
+    }
+
+    .containerImg {
+        align-items: center;
+        flex: 1;
+
+        div {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .containerImg img {
+        width: 95%;
+    }
+}

@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f0f0;
+  transition: background 0.5s ease;
+}
+
+#container {
+  width: 90%;
+  max-width: 450px;
+  padding: 2rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.form-control {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#inputCity {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background: #4a90e2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.weatherApp {
+  text-align: center;
+  color: #333;
+}
+
+#city {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+#temp {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.weatherInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+#weatherIcon {
+  width: 100px;
+  height: 100px;
+  margin: 1rem auto;
+  display: none;
+}
+
+#weatherIcon[src]:not([src=""]) {
+  display: block;
+}
+
+#description {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+#errorMessage {
+  color: #ff6b6b;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* מצבי רקע מעודכנים עם גרדיאנטים */
+.morning {
+  background: linear-gradient(120deg, #FDB777 0%, #FEF3B5 100%) !important;
+
+  button {
+    background: linear-gradient(to right, #FDB777, #FFB347);
+    color: white;
+  }
+}
+
+.sunlight {
+  background: linear-gradient(120deg, #ffc371 0%, #ff5f6d 100%) !important;
+
+  button {
+    background: linear-gradient(to right, #ff8a00, #ff5f6d);
+    color: white;
+  }
+}
+
+.sunset {
+  background: linear-gradient(120deg, #FFB88C 0%, #FF9A9E 100%) !important;
+
+  button {
+    background: linear-gradient(to right, #FFB88C, #DE6262);
+    color: white;
+  }
+}
+
+.night {
+  background: linear-gradient(120deg, #0c2835 0%, #2c5364 100%) !important;
+
+  button {
+    background: linear-gradient(to right, #2c5364, #0c2835);
+    color: white;
+  }
+}
+
+/* הוספת אפקט צל לקונטיינר במצבים השונים */
+.morning #container {
+  box-shadow: 0 8px 32px rgba(161, 196, 253, 0.3);
+}
+
+.sunlight #container {
+  box-shadow: 0 8px 32px rgba(255, 95, 109, 0.3);
+}
+
+.sunset #container {
+  box-shadow: 0 8px 32px rgba(255, 106, 136, 0.3);
+}
+
+.night #container {
+  box-shadow: 0 8px 32px rgba(12, 40, 53, 0.3);
+}
+
+/* רספונסיביות */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #container {
+    width: 80%;
+    max-width: 600px;
+    padding: 2.5rem;
+  }
+
+  #city {
+    font-size: 2.5rem;
+  }
+
+  #temp {
+    font-size: 4rem;
+  }
+
+  .weatherInfo {
+    font-size: 1.2rem;
+    gap: 1.5rem;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  #inputCity {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  #weatherIcon {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  #container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  #city {
+    font-size: 1.5rem;
+  }
+
+  #temp {
+    font-size: 2.5rem;
+  }
+
+  .weatherInfo {
+    font-size: 0.9rem;
+    gap: 0.8rem;
+  }
+
+  button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  #inputCity {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  #weatherIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  #description {
+    font-size: 1rem;
+  }
+}

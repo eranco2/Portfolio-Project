@@ -1,0 +1,137 @@
+#footer {
+    width: 100vw;
+    background-color: $backColor;
+}
+
+.iconsLinks {
+    width: 40vw;
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+#mobilePhone {
+    display: none;
+}
+
+#phoneImg:hover {
+    cursor: pointer;
+}
+
+#webPhone {
+    display: flex;
+    align-items: center;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    background-color: #212429;
+    padding: 0 20px;
+
+    P {
+        width: 200px;
+        padding: 0;
+        margin: 0;
+        color: $backColor;
+    }
+}
+
+#footerFullname p {
+    display: flex;
+    justify-content: center;
+}
+
+#footerStamp p {
+    display: flex;
+    justify-content: end;
+}
+
+// Tablet screens
+@media (min-width: 768px) and (max-width: 1024px) {
+    .iconsLinks {
+        width: 60vw;
+        padding: 20px;
+    }
+
+    .copyright {
+        padding: 0 15px;
+
+        p {
+            width: 150px;
+            font-size: 0.9em;
+        }
+    }
+}
+
+// Mobile screens
+@media (max-width: 767px) {
+    .iconsLinks {
+        width: 80vw;
+        padding: 15px;
+
+        div {
+            width: 15vw;
+            display: flex;
+            justify-content: center;
+
+            a {
+                display: flex;
+                justify-content: center;
+            }
+
+            img {
+                width: 60%;
+            }
+        }
+
+    }
+
+    #mobilePhone {
+        display: flex;
+        justify-content: center;
+    }
+
+    #webPhone {
+        display: none;
+    }
+
+    .copyright {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+
+        div {
+            width: 25vw;
+        }
+
+        p {
+            width: 100%;
+            font-size: 0.8em;
+        }
+    }
+
+
+    #footerFullname {
+        margin-right: 9vw;
+
+        p {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    #footerYear p {
+        display: flex;
+        justify-content: start;
+    }
+
+
+}

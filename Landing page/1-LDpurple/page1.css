@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+.container {
+    background-image: url(../images/Path\ 15.png);
+    height: 58vh;
+    background-size: cover;
+}
+
+.form {
+    display: inline-block;
+    margin-top: 27.5vh;
+    margin-right: 16vw;
+    padding: 40px;
+    background-color: #1A1A1AD4;
+    font-family: heebo;
+    color: #fff;
+    width: 22rem;
+    height: 25rem;
+    line-height: 1.6;
+}
+
+.form h1 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.form p {
+    font-size: 0.8rem;
+    color: #F9F9F9;
+    margin-bottom: 26px;
+    text-align: center;
+}
+
+.form label {
+    font-size: 0.75rem;
+}
+
+.form input[type=text] {
+    line-height: 2.1;
+    width: 100%;
+    margin-bottom: 7px;
+    margin-top: -7px;
+    border: 1px solid #D31C75;
+}
+
+.form input[type=submit] {
+    background-color: #D31C75;
+    border: none;
+    color: #fff;
+    font-size: 0.9375rem;
+    font-weight: bold;
+    padding: 6px 28px;
+    line-height: 1.6;
+    margin-top: 7px;
+    cursor: pointer;
+}
+
+/* phone device */
+@media (max-width: 576px) {
+
+    .container {
+        background-position: bottom center;
+        height: 28vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .form {
+        margin: unset;
+        margin-top: 8vh;
+        width: 18.75rem;
+        height: 28.125rem;
+    }
+
+    .form h1 {
+        text-wrap: balance;
+        font-size: 1.75rem;
+        line-height: 1.4;
+    }
+
+    .form input[type=text] {
+        margin-bottom: 18px;
+    }
+}

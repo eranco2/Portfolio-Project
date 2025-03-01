@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#bigContainer {
+
+    background-color: #E5EEFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 220px);
+    grid-template-rows: repeat(6, 200px);
+    gap: 0.8rem;
+    padding: 5rem;
+    font-family: assistant;
+}
+
+img {
+    width: 100%;
+}
+
+.text {
+    grid-area: 1/3/3/5;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #020253;
+}
+
+.text h1 {
+    font-size: 3em;
+    color: #0EE1DA;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 1em;
+    color: #F9F9F9;
+    width: 20vw;
+    text-align: center;
+}
+
+.box_form {
+    grid-area: 4/1/7/3;
+    direction: rtl;
+    background-color: #8E097C;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 5.6vh 0;
+}
+
+.box_form h1 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5%;
+}
+
+.box_form p {
+    font-size: 1em;
+    color: #F9F9F9;
+    text-align: center;
+    width: 90%;
+    margin-bottom: 8%;
+
+}
+
+form {
+    font-family: heebo;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #0EE1DA;
+    justify-items: center;
+}
+
+form input[type=text],
+#review {
+    background-color: #E5EEFF;
+    border: none;
+    border-bottom: 0.5vh solid #0EE1DA;
+    width: 20vw;
+    padding: 0.5rem;
+    margin-bottom: 3vh;
+    margin-top: 0.4vh;
+}
+
+form #review {
+    resize: none;
+    height: 12vh;
+}
+
+
+form input[type=submit] {
+    font-family: heebo;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: #0EE1DA;
+    color: #020253;
+    border: none;
+    width: 20vw;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* phone device */
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        width: 100vw;
+        display: grid;
+        padding: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(12, auto);
+    }
+
+    .text {
+        width: 100vw;
+        height: 44.7vh;
+        grid-area: 1/1/3/3;
+        margin: -1rem 0 0 -1rem;
+    }
+
+    .text p {
+        font-size: 1.25em;
+        width: 70vw;
+        margin-top: 2vh;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .box_form {
+        grid-area: 7/1/10/3;
+        margin: initial;
+        padding: 4vh 0;
+    }
+
+    .box_form h1,
+    .box_form p {
+        width: 80vw;
+        text-align: center;
+        margin: initial;
+        margin-bottom: 1vh;
+    }
+
+    .box_form p {
+        margin-bottom: 3.5vh;
+    }
+
+    .box_form h1 {
+        font-size: 1.9em;
+    }
+
+    form {
+        margin: initial;
+    }
+
+    form input[type=text],
+    #review,
+    form input[type=submit] {
+        width: 80vw;
+        border-bottom: 0.4vh solid #0EE1DA;
+        margin-bottom: 1vh;
+        margin-top: -0.1vh;
+    }
+}
+
+/* tablet device */
+@media (min-width:768px) and (max-width:1024px) {
+    .container {
+        grid-template-columns: repeat(4, 160px);
+        grid-template-rows: repeat(6, 140px);
+    }
+
+    .text h1 {
+        font-size: 2.5em;
+    }
+
+    .text p {
+        width: 30vw;
+    }
+
+    .box_form h1 {
+        font-size: 1.5em;
+    }
+
+    .box_form p {
+        font-size: 0.8em;
+    }
+
+    form input[type=text],
+    #review,
+    form input[type=submit] {
+        width: 35vw;
+        margin: 0;
+    }
+
+    form #review {
+        height: 10vh;
+    }
+
+    form input[type=submit] {
+        padding: 0;
+    }
+}

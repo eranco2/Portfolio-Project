@@ -1,0 +1,128 @@
+.containerCardsSection {
+    width: 100vw;
+    background-color: #F6F6F6;
+    text-align: center;
+    margin-top: 7vh;
+    padding: 7vh 0 10vh 0;
+    scroll-margin-top: 12vh;
+}
+
+h1 {
+    font-size: 2.25em;
+    font-family: $baseFont;
+    color: $baseColorText;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.25em;
+    font-family: $baseFont;
+    color: $baseColorText;
+}
+
+.cardsContiner {
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    row-gap: 40px;
+    margin-top: 8vh;
+}
+
+.card {
+    margin: 0 auto;
+    width: 14vw;
+    height: 50vh;
+}
+
+.card-img-top {
+    height: 17vh;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+        width: 150px;
+        margin-bottom: 5px;
+        background-color: $backColor;
+        border: none;
+
+        &:hover {
+            background-color: $backColor;
+            outline: 2px solid rgb(0, 0, 0);
+        }
+    }
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .containerCardsSection {
+        padding: 5vh 0 8vh 0;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.1em;
+        }
+    }
+
+    .cardsContiner {
+        width: 80vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 30px;
+        margin-top: 6vh;
+    }
+
+    .card {
+        width: 25vw;
+    }
+
+    .card-img-top {
+        height: 25vh;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .containerCardsSection {
+        padding: 4vh 0 6vh 0;
+        margin-top: 5vh;
+
+        h1 {
+            font-size: 1.75em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+    }
+
+
+    .cardsContiner {
+        width: 100vw;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 25px;
+        margin-top: 4vh;
+    }
+
+    .card {
+        width: 45vw;
+    }
+
+    .card-img-top {
+        height: 12vh;
+    }
+}

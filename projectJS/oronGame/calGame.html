@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="calGameJS.js" defer></script>
+    <link rel="stylesheet" href="calGameCSS.css">
+</head>
+
+<body>
+    <div id="explanation">
+        <h1>משחק מתמטיקה</h1>
+        <p>! כאן תוכלו לתרגל את יכולות החישוב שלכם ! בחרו איזה סוג תרגיל תרצו ומאיזה רמה להתחיל ותהנו</p>
+    </div>
+    <div id="containerModes">
+        <button id="easy" value="easy">קל</button>
+        <button id="medium" value="medium">בינוני</button>
+        <button id="hard" value="hard">קשה</button>
+    </div>
+
+    <div id="containerOperator">
+        <label for="operator">:בחר את סוג התרגיל</label>
+        <select id="selectOperator">
+            <option value="all">הכל !</option>
+            <option value="+&-">+ & -</option>
+            <option value="*&/">* & /</option>
+        </select>
+    </div>
+
+    <div id="calculator">
+        <span id="number1"></span>
+        <span id="operators"></span>
+        <span id="number2"></span> =
+        <input type="number" id="result" placeholder="">
+        <button id="send">שליחה</button>
+        <p id="countPoints"></p>
+        <p id="incentive"></p>
+        <p id="wrong"></p>
+        <p id="alert"></p>
+    </div>
+    <div></div>
+    <table id="resultsMemory">
+        <tr>
+            <th>התרגיל</th>
+            <th>התוצאה</th>
+        </tr>
+        <tbody id="bodyTable">
+            <!-- נוסיף שורות עם JS -->
+        </tbody>
+    </table>
+</body>
+
+</html>

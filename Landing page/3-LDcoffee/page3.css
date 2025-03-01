@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-display: row;
+
+}
+
+.img {
+    background-image: url(../images/CoffeeBig.png);
+    height: 100vh;
+    width: 60vw;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #707070;
+}
+
+
+.box {
+    border: 1px solid #707070;
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.text_box {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    direction: rtl;
+    font-family: Heebo;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: #020253;
+}
+
+p {
+    font-size: 1rem;
+    color: #020253;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+form {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #2C2C2C;
+
+}
+
+form input[type=text] {
+    background-color: #E5EEFF;
+    border: none;
+    border-bottom: 2px solid #020253;
+    width: 24vw;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+form input[type=submit] {
+    background-color: #020253;
+    color: #fff;
+    border: none;
+    width: 9.54vw;
+    padding: 8px;
+    margin-top: 7px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.33px;
+    cursor: pointer;
+}
+
+/* phone device */
+@media (min-width: 576px) and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img {
+        background-image: url(../images/Coffee.png);
+        width: 100vw;
+        height: 60vh;
+        border: none;
+    }
+
+    .box {
+        width: 100vw;
+        border: none;
+    }
+
+    .text_box {
+        width: 75vw;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        margin-top: -35px;
+    }
+
+    p {
+        font-size: 0.9rem;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    form {
+        font-size: 0.65rem;
+    }
+
+    form input[type=text] {
+        width: 75vw;
+        border-bottom: 3px solid #020253;
+        margin-bottom: 20px;
+    }
+
+    form input[type=submit] {
+        width: 75vw;
+        padding: 9px;
+    }
+}
+
+/* tablet device */
+@media (min-width:768px) and (max-width:1024px) {
+    h1 {
+        font-size: 1.7rem;
+    }
+}

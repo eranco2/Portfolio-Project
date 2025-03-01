@@ -1,0 +1,162 @@
+.containerFormContact {
+    display: flex;
+    scroll-margin-top: 12vh;
+}
+
+.imageSide {
+    padding-left: 300px;
+
+    img {
+        width: 30vw;
+    }
+}
+
+.formSide {
+    direction: rtl;
+    width: 36vw;
+    padding: 100px;
+    margin-left: 30px;
+
+    h1 {
+        color: whitesmoke;
+        font: 2.5rem $baseFont ;
+        font-weight: bold;
+
+    }
+
+    p,
+    label {
+        color: whitesmoke;
+        font: 1.1rem $baseFont;
+    }
+
+}
+
+
+.form-display {
+
+    label {
+        display: block;
+    }
+
+    input,
+    textarea {
+        width: 16.3vw;
+        border: none;
+        border-bottom: 3px $backColor solid;
+        border-radius: 3px;
+        margin-bottom: 8px;
+    }
+}
+
+#submit-btn {
+    width: 7vw;
+    padding: 3px;
+    background-color: $backColor;
+    border: none;
+    border-radius: 15px;
+    color: whitesmoke;
+    font-size: 1.1rem;
+    font: $baseFont;
+
+    &:hover {
+        outline: 2px solid snow;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .containerFormContact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageSide {
+        display: flex;
+        align-items: end;
+        width: 80vw;
+        padding: 0;
+
+        img {
+            width: 30vw;
+        }
+    }
+
+    .formSide {
+        width: 50vw;
+        padding: 50px;
+        margin-left: 200px;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p,
+        label {
+            font-size: 1rem;
+        }
+    }
+
+    .form-display {
+
+        input,
+        textarea {
+            width: 40vw;
+        }
+    }
+
+    #submit-btn {
+        width: 15vw;
+        padding: 5px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .containerFormContact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageSide {
+        display: flex;
+        align-items: end;
+        width: 80vw;
+        padding: 0;
+
+        img {
+            width: 30vw;
+        }
+    }
+
+    .formSide {
+        width: 90vw;
+        padding: 0px 30px 30px;
+        margin-right: 50px;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        p,
+        label {
+            font-size: 0.9rem;
+        }
+    }
+
+    .form-display {
+
+        input,
+        textarea {
+            width: 70vw;
+        }
+    }
+
+    #submit-btn {
+        width: 25vw;
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+}

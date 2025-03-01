@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Orbitron&display=swap');
+
+$baseFont: Heebo;
+$sizeH1: 5em;
+$sizeText: 1.3em;
+$baseColorText: rgb(58, 58, 58);
+$baseWidth: 100vw;
+$backColor: #54a58a;
+$logoColor: #0072e1;
+$padd: 1.25rem;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#boxAll,
+#projectPage,
+body,
+html {
+
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+// %cardTemplet {}
+
+// @mixin someting{
+
+// }

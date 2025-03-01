@@ -1,0 +1,130 @@
+.container_header {
+    padding-top: 12vh;
+    background-image: linear-gradient(to bottom, $backColor, #ffffff81),
+        url('./icons/Image20230808090738.png');
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .main {
+        color: $baseColorText;
+        font-family: $baseFont;
+        width: 60%;
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h1 {
+            font-size: $sizeH1;
+
+        }
+
+        & P {
+            font-size: $sizeText;
+        }
+
+    }
+}
+
+.imgHeader {
+    background-color: #fff;
+    width: 80vw;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    img {
+        width: 80px;
+    }
+}
+
+// Tablet screens
+@media (min-width: 768px) and (max-width: 1024px) {
+    .main {
+        width: 80%;
+        padding-top: 20px;
+
+        h1 {
+            font-size: calc($sizeH1 - 0.5rem);
+        }
+
+        p {
+            font-size: calc($sizeText - 0.2rem);
+        }
+    }
+
+    .imgHeader {
+        width: 90vw;
+
+        img {
+            width: 70px;
+        }
+    }
+
+
+}
+
+// Small tablet/large mobile screens
+@media (max-width:767px) {
+    .container_header {
+        .main {
+            width: 85%;
+            margin-top: -4vh;
+
+
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: calc($sizeText - 0.3rem);
+            }
+        }
+    }
+
+    .imgHeader {
+        display: none;
+    }
+
+    @keyframes slide {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-300%);
+        }
+    }
+
+    .carousel-mobile {
+        overflow: hidden;
+        padding: 10px 0;
+        background: white;
+        white-space: nowrap;
+        position: relative;
+
+    }
+
+
+    .carousel-mobile:hover .slide-mobile {
+        animation-play-state: paused;
+    }
+
+    .slide-mobile {
+        display: inline-block;
+        animation: 20s slide infinite linear;
+    }
+
+    .slide-mobile img {
+        height: 100%;
+        margin: 0 10px;
+    }
+
+
+}
