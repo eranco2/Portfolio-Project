@@ -1,9 +1,29 @@
+:root {
+    --green-color: #00a74a;
+    --green-light: #13ff7c;
+    --red-color: #9f0f17;
+    --red-light: #ff4c4c;
+    --yellow-color: #cca707;
+    --yellow-light: #fed93f;
+    --blue-color: #094a8f;
+    --blue-light: #1c95ff;
+    --center-color: #d6d6d6;
+    --display-color: #330000;
+    --count-color: #dc0d29;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f9e3e3;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #545353, #b1acac);
     font-family: Arial, sans-serif;
     margin: 0;
 }
@@ -13,82 +33,208 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
-    width: 500px;
-    height: 500px;
+    width: min(95vw, 500px);
+    height: min(95vw, 500px);
     position: relative;
+    border-radius: 50%;
+    background-color: #d6d6d6;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* עיצוב הכפתורים הצבעוניים */
+#green,
+#red,
+#yellow,
+#blue {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
 }
 
 #green {
-    background-color: darkgreen;
+    background-color: var(--green-color);
     grid-column: 1;
     grid-row: 1;
     border-top-left-radius: 100%;
 }
 
 #red {
-    background-color: red;
+    background-color: var(--red-color);
     grid-column: 2;
     grid-row: 1;
     border-top-right-radius: 100%;
 }
 
 #yellow {
-    background-color: yellow;
+    background-color: var(--yellow-color);
     grid-column: 1;
     grid-row: 2;
     border-bottom-left-radius: 100%;
 }
 
 #blue {
-    background-color: blue;
+    background-color: var(--blue-color);
     grid-column: 2;
     grid-row: 2;
     border-bottom-right-radius: 100%;
 }
 
+/* אפקטים בעת מעבר עכבר */
+#green:hover {
+    filter: brightness(1.1);
+}
 
+#red:hover {
+    filter: brightness(1.1);
+}
+
+#yellow:hover {
+    filter: brightness(1.1);
+}
+
+#blue:hover {
+    filter: brightness(1.1);
+}
+
+/* עיצוב המרכז */
 #display {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #111;
-    width: 250px;
-    height: 250px;
+    background: var(--center-color);
+    width: 45%;
+    height: 45%;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(0, 0, 0, 0.3) inset;
+    z-index: 10;
 }
 
+#display h1 {
+    font-size: clamp(20px, 6vw, 32px);
+    /* רספונסיבי - גודל גופן משתנה */
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.displayInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* עיצוב כפתורי START ו-END */
+.button-wrapper {
+    display: flex;
+    gap: clamp(5px, 2vw, 10px);
+    margin-bottom: 10px;
+}
 
 #startButton,
 #endButton {
-    background: #fff;
+    background: linear-gradient(to bottom, #444, #222);
+    color: white;
     border: none;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
+    padding: clamp(5px, 1.5vw, 10px) clamp(8px, 2vw, 15px);
+    border-radius: 20px;
     cursor: pointer;
-    margin-bottom: 30px;
+    font-size: clamp(10px, 3vw, 14px);
+    font-weight: bold;
+    transition: all 0.2s;
+    min-width: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3),
+        0 -1px 1px rgba(255, 255, 255, 0.1) inset;
 }
 
-#start:hover {
-    background: #ddd;
+#startButton:hover,
+#endButton:hover {
+    background: linear-gradient(to bottom, #555, #333);
+    transform: translateY(-2px);
 }
 
+#startButton:active,
+#endButton:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#startButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* עיצוב תצוגת המספר */
 #displayCount {
-    background: #330000;
-    color: red;
-    font-family: courier;
-    font-size: 20px;
-    height: 40px;
-    width: 65px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 30px;
+    background: var(--display-color);
+    color: var(--count-color);
+    font-family: "Courier New", monospace;
+    font-size: clamp(16px, 5vw, 24px);
+    height: clamp(30px, 8vw, 40px);
+    width: clamp(50px, 13vw, 65px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #555;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) inset;
+}
+
+#count {
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 400px) {
+    .container {
+        gap: 8px;
+        padding: 8px;
+    }
+
+    #display {
+        width: 48%;
+        height: 48%;
+    }
+
+    #display h1 {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .displayInfo {
+        gap: 5px;
+    }
+
+    #startButton,
+    #endButton {
+        padding: 5px 8px;
+        font-size: 12px;
+        min-width: 40px;
+    }
+
+    #displayCount {
+        height: 30px;
+        width: 50px;
+        font-size: 16px;
+    }
+}
+
+/* התאמה למסכים גדולים */
+@media (min-width: 800px) {
+    .container {
+        width: 500px;
+        height: 500px;
+    }
 }
