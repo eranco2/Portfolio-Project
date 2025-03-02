@@ -1,0 +1,239 @@
+/* עיצוב כללי */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ECE5DD;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.inputText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 15px;
+}
+
+/* תיבות הקלט */
+input[type="text"],
+textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 15px;
+    border: 2px solid #25D366;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #128C7E;
+    box-shadow: 0 0 8px rgba(18, 140, 126, 0.4);
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#helper {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+/* כפתור יצירת לינק */
+button#send {
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+}
+
+button#send:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.4);
+}
+
+button#send:active {
+    transform: translateY(1px);
+}
+
+/* אזור הקישור */
+#URLcode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    word-break: break-all;
+}
+
+#URLcode button {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* עיצוב הטבלה */
+table {
+    width: 100%;
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* כותרות הטבלה */
+th {
+    background-color: #128C7E;
+    color: white;
+    padding: 15px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* שורות בטבלה */
+td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+tr:hover td {
+    background-color: #f5f5f5;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* שינוי צבע שורה שנבחרה */
+.selected-row {
+    background-color: rgba(18, 140, 126, 0.1) !important;
+    color: #128C7E;
+    font-weight: bold;
+}
+
+.selected-row td {
+    border-color: rgba(18, 140, 126, 0.2);
+}
+
+/* כפתורי מחיקה והעתקה */
+button {
+    background-color: #128C7E;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #0d6a5c;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* עיצוב התמונה */
+.disabled-link {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+.enabled-link {
+    pointer-events: auto;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* התמונה תוצג במרכז */
+a#imageLink {
+    display: block;
+    margin: 30px auto;
+    width: 300px;
+    height: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    transition: all 0.4s ease;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.enabled-link:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(18, 140, 126, 0.2);
+}
+
+/* עיצוב אלרטים */
+p {
+    color: #128C7E;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px 5px;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    a#imageLink {
+        width: 200px;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="indexJS.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="inputText">
+            <input type="text" id="phoneNumber" placeholder="לדוגמא: 0501234567">
+            <span id="helper"></span>
+            <textarea id="text" rows="4"
+                placeholder="לדוגמא: היי שמח שבחרתם בנו, השאירו פרטים ונחזור בקרוב!"></textarea>
+            <button id="send">צור לינק</button>
+
+        </div>
+        <div>
+            <span id="URLcode"></span>
+        </div>
+        <table id="linksTable">
+            <thead>
+                <tr>
+                    <th>מספר טלפון</th>
+                    <th>הודעה</th>
+                    <th>לינק</th>
+                    <th>מחיקה</th>
+                </tr>
+            </thead>
+            <tbody id="linksBody">
+                <!-- כאן יופיעו הלינקים -->
+            </tbody>
+        </table>
+        <a id="imageLink" href="" target="_blank" class="disabled-link">
+            <img src="WhatsAppButtonGreenLarge.svg" alt="לחץ כאן">
+        </a>
+    </div>
+</body>
+
+</html>
