@@ -299,8 +299,9 @@ p {
 
 .card {
   margin: 0 auto;
-  width: 14vw;
+  width: 16vw;
   height: 50vh;
+  border: solid rgba(0, 0, 0, 0.336) 1px;
 }
 
 .card-img-top {
@@ -322,6 +323,14 @@ p {
 .card-body a:hover {
   background-color: #54a58a;
   outline: 2px solid rgb(0, 0, 0);
+}
+
+.ldCardsContainer {
+  background: linear-gradient(to bottom, white, #54a58a);
+}
+
+.jsCardsContainer {
+  background: linear-gradient(to top, white, rgba(212, 226, 221, 0.0823529412));
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -377,17 +386,19 @@ p {
   display: flex;
   scroll-margin-top: 12vh;
   margin-top: 10vh;
+  direction: rtl;
 }
 
 .imageSide {
-  padding-left: 300px;
+  padding-left: 100px;
+  margin-right: 200px;
 }
 .imageSide img {
   width: 30vw;
 }
 
 .formSide {
-  direction: rtl;
+  direction: ltr;
   width: 36vw;
   padding: 100px;
   margin-left: 30px;

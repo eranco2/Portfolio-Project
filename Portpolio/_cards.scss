@@ -30,12 +30,14 @@ p {
     text-align: center;
     row-gap: 40px;
     margin-top: 8vh;
+
 }
 
 .card {
     margin: 0 auto;
-    width: 14vw;
+    width: 16vw;
     height: 50vh;
+    border: solid rgba(0, 0, 0, 0.336) 1px;
 }
 
 .card-img-top {
@@ -61,7 +63,13 @@ p {
     }
 }
 
+.ldCardsContainer {
+    background: linear-gradient(to bottom, white, #54a58a);
+}
 
+.jsCardsContainer {
+    background: linear-gradient(to top, white, #d4e2dd15);
+}
 
 
 @media (min-width: 768px) and (max-width: 1024px) {

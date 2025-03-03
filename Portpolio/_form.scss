@@ -2,10 +2,12 @@
     display: flex;
     scroll-margin-top: 12vh;
     margin-top: 10vh;
+    direction: rtl;
 }
 
 .imageSide {
-    padding-left: 300px;
+    padding-left: 100px;
+    margin-right: 200px;
 
     img {
         width: 30vw;
@@ -13,7 +15,7 @@
 }
 
 .formSide {
-    direction: rtl;
+    direction: ltr;
     width: 36vw;
     padding: 100px;
     margin-left: 30px;
