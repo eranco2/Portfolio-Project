@@ -21,7 +21,7 @@ p {
 }
 
 .cardsContiner {
-    width: 60vw;
+    width: 60%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -29,14 +29,14 @@ p {
     align-items: center;
     text-align: center;
     row-gap: 40px;
-    margin-top: 8vh;
+    margin-top: 65px;
 
 }
 
 .card {
     margin: 0 auto;
-    width: 16vw;
-    height: 50vh;
+    width: 80%;
+    height: 450px;
     border: solid rgba(0, 0, 0, 0.336) 1px;
 }
 
@@ -94,7 +94,7 @@ p {
     }
 
     .card {
-        width: 25vw;
+        width: 80%;
     }
 
     .card-img-top {
